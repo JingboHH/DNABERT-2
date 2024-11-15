@@ -4,7 +4,7 @@ ssh login2.alpha.hpc.tu-dresden.de -l
 
 # move documents: 
 
-scp -r jihe529c@dataport1.hpc.tu-dresden.de:/data/horse/ws/dna_bert_benchmark /home/documents
+scp -r @dataport1.hpc.tu-dresden.de:/data/horse/ws/dna_bert_benchmark /home/documents
 
 data path: /data/horse/ws/dna_bert_benchmark/
 
@@ -18,8 +18,8 @@ module load PyTorch/2.1.2
 
 source /data/horse/ws/dna_bert_benchmark/env/dna_bert_env/bin/activate
 
-cd /data/horse/ws/jihe529c-dna_bert_benchmark/DNABERT_fine/DNABERT_2/finetune
-sh scripts/run_dnabert2.sh /data/horse/ws/jihe529c-dna_bert_benchmark/dataset
+cd /data/horse/ws/dna_bert_benchmark/DNABERT_fine/DNABERT_2/finetune
+sh scripts/run_dnabert2.sh /data/horse/ws/dna_bert_benchmark/dataset
 
 squeue --me
 
@@ -43,7 +43,7 @@ nano
 cat
 
 # run scripts with different kmer
-sh scripts/run_nt.sh /data/horse/ws/jihe529c-dna_bert_benchmark/dataset 1
+sh scripts/run_nt.sh /data/horse/ws/dna_bert_benchmark/dataset 1
 
 ll | grasp
 
